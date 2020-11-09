@@ -25,17 +25,10 @@ function setup() {
 
 	paper = new Paper(200,100,20);
 
-	red1 = createSprite(540, 660, 200,20);
-	red1.shapeColor=color("red");
-	World.add(world, red1);
+	red1 = new Dustbin (540, 660, 200,20);
+	red2 = new Dustbin (450, 600, 20,100);
+	red3 = new Dustbin (630, 600, 20,100);
 
-	red2 = createSprite(450, 600, 20,100);
-	red2.shapeColor=color("red");
-	World.add(world, red2);
-
-	red3 = createSprite(630, 600, 20,100);
-	red3.shapeColor=color("red");
-	World.add(world, red3);
 
 	
 
@@ -52,6 +45,9 @@ function draw() {
   
   ground.display();
   paper.display();
+  red1.display();
+  red2.display();
+  red3.display();
   
   keyPressed();
   drawSprites();
